@@ -53,7 +53,7 @@ const AutoCompleteControl = observer(
 
         //Debounce функция поиска подсказок
         const deboucedFetchSuggestions = useDebounce(
-            (item: string) => vm.fetchSuggestions(item),
+            (value: string) => vm.fetchSuggestions(value),
             debounceDelay,
         );
 
@@ -66,6 +66,7 @@ const AutoCompleteControl = observer(
                 deboucedFetchSuggestions(e.target.value);
             } else {
                 //Очистка массива подсказок при пустом input
+                setIsComponentVisible(false);
                 vm.clearSuggestions();
             }
         };
