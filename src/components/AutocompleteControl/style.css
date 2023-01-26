@@ -1,0 +1,62 @@
+.autocomlete-control {
+    margin: 30px;
+    position: relative;
+    width: 300px;
+}
+
+.autocomlete-control__input {
+    box-shadow: inset #abacaf 0 0 0 2px;
+    border: 0;
+    background: rgba(0, 0, 0, 0);
+    appearance: none;
+    width: 100%;
+    position: relative;
+    border-radius: 3px;
+    padding: 9px 12px;
+    line-height: 1.4;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 400;
+    height: 40px;
+    transition: all 0.2s ease;
+}
+
+.autocomlete-control__input:hover {
+    outline: 0;
+    box-shadow: 0 0 0 0 #fff inset, #777777 0 0 0 2px;
+}
+
+.autocomlete-control__input:focus {
+    background: #fff;
+    outline: 0;
+    box-shadow: 0 0 0 0 #fff inset, #525252 0 0 0 2px;
+}
+
+.autocomlete-suggeststions {
+    position: absolute;
+    top: 40px;
+    z-index: 1;
+    max-height: 240px;
+    width: 100%;
+    overflow-y: scroll;
+    box-shadow: 0 0 0 0 #fff inset, #777777 0 0 0 2px;
+}
+
+.autocomlete-suggeststions__list {
+    display: contents;
+}
+
+.autocomlete-suggeststions__list li {
+    background: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.autocomlete-suggeststions__list li:hover {
+    cursor: pointer;
+    background: rgb(167, 167, 167);
+}
+
+.autocomlete-suggeststions__list li.autocomlete-suggeststions__loader:hover {
+    cursor: default;
+    background: rgb(255, 255, 255);
+}

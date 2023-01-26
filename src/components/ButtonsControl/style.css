@@ -1,0 +1,47 @@
+.buttons-control {
+    display: flex;
+    align-items: center;
+    margin: 30px;
+}
+
+.buttons-control__input {
+    margin: 5px;
+    order: 0;
+    box-shadow: inset #abacaf 0 0 0 2px;
+    border: 0;
+    background: rgba(0, 0, 0, 0);
+    appearance: none;
+    width: 300px;
+    position: relative;
+    border-radius: 3px;
+    padding: 9px 12px;
+    line-height: 1.4;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 400;
+    height: 40px;
+    transition: all 0.2s ease;
+}
+
+.buttons-control__button {
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #4b4b4b;
+    border: none;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+}
+
+.buttons-control__button:hover {
+    cursor: pointer;
+    background-color: #303030;
+}
+
+.button-left {
+    order: -1;
+}
+
+.button-right {
+    order: 1;
+}

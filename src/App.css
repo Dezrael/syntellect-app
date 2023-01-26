@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.test-container {
+    display: flex;
+    flex-direction: column;
+    height: 130vh;
+}
+
+.test-container__control {
+    max-width: 800px;
+}
+
+.test-container__control h2 {
+    padding: 15px 30px;
+}
+
+.test-container__control p {
+    padding: 5px 30px;
+}
