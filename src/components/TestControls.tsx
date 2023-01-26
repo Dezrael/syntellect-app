@@ -1,6 +1,6 @@
 import AutocompleteControlVM from '../viewModels/AutocompleteControlVM';
 import ButtonsControlVM from '../viewModels/ButtonsControlVM';
-import AutoCompleteControl from './AutocompleteControl';
+import AutocompleteControl from './AutocompleteControl';
 import ButtonsControl from './ButtonsControl';
 import CountryItem from './CountryItem';
 
@@ -63,13 +63,13 @@ export const SecondTestButtonsControl = () => {
 };
 
 /**
- * @type {AutoCompleteControl} - контрол с максимальным количеством подсказок - 3
+ * @type {AutocompleteControl} - контрол с максимальным количеством подсказок - 3
  */
 export const FirstTestAutocompleteControl = () => {
     const autocompleteControlVm = new AutocompleteControlVM<CountryInfo>(getCountryByName);
 
     return (
-        <AutoCompleteControl
+        <AutocompleteControl
             vm={autocompleteControlVm}
             maxSuggestions={3}
             SuggestionItem={CountryItem}
@@ -78,13 +78,13 @@ export const FirstTestAutocompleteControl = () => {
 };
 
 /**
- * @type {AutoCompleteControl} - контрол с максимальным количеством подсказок - 10
+ * @type {AutocompleteControl} - контрол с максимальным количеством подсказок - 10
  */
 export const SecondTestAutocompleteControl = () => {
     const autocompleteControlVm = new AutocompleteControlVM<CountryInfo>(getCountryByName);
 
     return (
-        <AutoCompleteControl
+        <AutocompleteControl
             vm={autocompleteControlVm}
             maxSuggestions={10}
             SuggestionItem={CountryItem}

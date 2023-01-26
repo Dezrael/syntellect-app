@@ -7,7 +7,7 @@ import useComponentVisible from '../../hooks/useComponentVisible';
 
 import './style.css';
 
-interface AutocompliteProps<T> {
+interface AutocompleteProps<T> {
     /**
      * ViewModel компонента
      */
@@ -41,13 +41,13 @@ interface AutocompliteProps<T> {
  *
  * @template T - generic тип объекта, представляющего собой подсказку
  */
-const AutoCompleteControl = observer(
+const AutocompleteControl = observer(
     <T extends object>({
         vm,
         SuggestionItem,
         maxSuggestions = 5,
         debounceDelay = 500,
-    }: AutocompliteProps<T>) => {
+    }: AutocompleteProps<T>) => {
         //State видимости элемента с подсказками
         const { ref, isComponentVisible, setIsComponentVisible } = useComponentVisible(false);
 
@@ -81,18 +81,18 @@ const AutoCompleteControl = observer(
         );
 
         return (
-            <div className="autocomlete-control" ref={ref}>
+            <div className="autocomplete-control" ref={ref}>
                 <input
-                    className="autocomlete-control__input"
+                    className="autocomplete-control__input"
                     type="text"
                     value={vm.inputValue}
                     onChange={inputChangeHandle}
                 />
                 {isComponentVisible && (vm.suggestions.length > 0 || vm.isLoading) && (
-                    <div className="autocomlete-suggeststions">
-                        <ul className="autocomlete-suggeststions__list">
+                    <div className="autocomplete-suggeststions">
+                        <ul className="autocomplete-suggeststions__list">
                             {vm.isLoading && (
-                                <li className="autocomlete-suggeststions__loader">Загрузка...</li>
+                                <li className="autocomplete-suggeststions__loader">Загрузка...</li>
                             )}
                             {vm.suggestions
                                 ?.map((item, index) => (
@@ -126,4 +126,4 @@ export interface SuggestionItemProps<T> {
     selectItem: (item: T, name: string) => void;
 }
 
-export default AutoCompleteControl;
+export default AutocompleteControl;
